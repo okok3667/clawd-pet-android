@@ -84,7 +84,7 @@ class ClawdPetService : Service() {
         val notification: Notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("🦀 Clawd Pet đang hoạt động")
             .setContentText("Chạm để mở cài đặt • Vuốt để đóng")
-            .setSmallIcon(R.drawable.bubble_bg)
+            .setSmallIcon(R.drawable.ic_stat_clawd)
             .setContentIntent(pendingOpenApp)
             .addAction(0, "Tắt chú cua", pendingStop)
             .setOngoing(true)
