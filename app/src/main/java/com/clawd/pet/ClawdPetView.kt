@@ -102,26 +102,36 @@ class ClawdPetView(private val context: Context) {
     }
 
     private fun getScreenWidth(): Int {
-        val dm = DisplayMetrics()
-        @Suppress("DEPRECATION")
-        windowManager.defaultDisplay.getMetrics(dm)
-        return dm.widthPixels
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            windowManager.currentWindowMetrics.bounds.width()
+        } else {
+            val dm = DisplayMetrics()
+            @Suppress("DEPRECATION")
+            windowManager.defaultDisplay.getMetrics(dm)
+            dm.widthPixels
+        }
     }
 
     private fun getScreenHeight(): Int {
-        val dm = DisplayMetrics()
-        @Suppress("DEPRECATION")
-        windowManager.defaultDisplay.getMetrics(dm)
-        return dm.heightPixels
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            windowManager.currentWindowMetrics.bounds.height()
+        } else {
+            val dm = DisplayMetrics()
+            @Suppress("DEPRECATION")
+            windowManager.defaultDisplay.getMetrics(dm)
+            dm.heightPixels
+        }
     }
 
     private fun updateSize() {
         val density = context.resources.displayMetrics.density
         val sizePx = (crabSizeDp * density).toInt()
         val params = imageView.layoutParams
-        params.width = sizePx
-        params.height = sizePx
-        imageView.layoutParams = params
+        if (params != null) {
+            params.width = sizePx
+            params.height = sizePx
+            imageView.layoutParams = params
+        }
     }
 
     fun show() {
