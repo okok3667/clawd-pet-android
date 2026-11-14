@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clawd_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!-- Speech bubble -->
+    <TextView
+        android:id="@+id/clawd_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/bubble_bg"
+        android:elevation="6dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:maxWidth="200dp"
+        android:text="thinking..."
+        android:textColor="@color/clawd_bubble_text"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <!-- Crab Image view -->
+    <ImageView
+        android:id="@+id/clawd_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="Clawd Pet"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>

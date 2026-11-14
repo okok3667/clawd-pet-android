@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="clawd_orange">#D96B43</color>
+    <color name="clawd_dark">#2B2B2B</color>
+    <color name="clawd_bubble_bg">#FFF3E0</color>
+    <color name="clawd_bubble_border">#D96B43</color>
+    <color name="clawd_bubble_text">#3E2723</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="primary">#E65100</color>
+    <color name="background_light">#FAFAFA</color>
+</resources>
