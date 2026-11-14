@@ -44,8 +44,18 @@ class MainActivity : AppCompatActivity() {
         val savedSize = prefs.getInt("pet_size", 80)
         val savedSpeed = prefs.getFloat("pet_speed", 1.0f)
 
-        sliderSize.value = savedSize.toFloat().coerceIn(sliderSize.valueFrom, sliderSize.valueTo)
-        sliderSpeed.value = savedSpeed.coerceIn(sliderSpeed.valueFrom, sliderSpeed.valueTo)
+        // Setup size slider
+        sliderSize.valueFrom = 50f
+        sliderSize.valueTo = 130f
+        sliderSize.stepSize = 10f
+        sliderSize.value = savedSize.toFloat().coerceIn(50f, 130f)
+
+        // Setup speed slider
+        sliderSpeed.valueFrom = 0.5f
+        sliderSpeed.valueTo = 2.5f
+        sliderSpeed.stepSize = 0.5f
+        sliderSpeed.value = savedSpeed.coerceIn(0.5f, 2.5f)
+
         tvSizeLabel.text = "Kích thước: $savedSize dp"
         tvSpeedLabel.text = "Tốc độ bò: ${savedSpeed}x"
 

@@ -150,12 +150,10 @@
                     android:id="@+id/slider_size"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:stepSize="10.0"
-                    app:value="80.0"
-                    app:valueFrom="50.0"
-                    app:valueTo="130.0"
-                    app:thumbColor="@color/clawd_orange"
-                    app:trackColorActive="@color/clawd_orange" />
+                    android:valueFrom="50.0"
+                    android:valueTo="130.0"
+                    android:value="80.0"
+                    android:stepSize="10.0" />
 
                 <!-- Speed Slider -->
                 <TextView
@@ -171,12 +169,10 @@
                     android:id="@+id/slider_speed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:stepSize="0.5"
-                    app:value="1.0"
-                    app:valueFrom="0.5"
-                    app:valueTo="2.5"
-                    app:thumbColor="@color/clawd_orange"
-                    app:trackColorActive="@color/clawd_orange" />
+                    android:valueFrom="0.5"
+                    android:valueTo="2.5"
+                    android:value="1.0"
+                    android:stepSize="0.5" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
